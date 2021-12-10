@@ -1,12 +1,15 @@
 
 module.exports = (webpackConfigEnv, argv) => {
     return {
-        entry: './src/index.tsx',
-        mode: 'production',
-        externals: {
-            'react': 'react',
-            'react-dom': 'react-dom'
+        entry: {
+            index: {
+                import: './src/index.tsx',
+                library: {
+                    type: 'umd'
+                }
+            }
         },
+        mode: 'production',
         resolve: {
             extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.scss']
         },
