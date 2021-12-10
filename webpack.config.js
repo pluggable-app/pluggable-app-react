@@ -3,6 +3,10 @@ module.exports = (webpackConfigEnv, argv) => {
     return {
         entry: './src/index.tsx',
         mode: 'production',
+        externals: {
+            'react': 'react',
+            'react-dom': 'react-dom'
+        },
         resolve: {
             extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.scss']
         },
