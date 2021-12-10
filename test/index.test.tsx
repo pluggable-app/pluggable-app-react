@@ -10,15 +10,8 @@ describe('Root component', () => {
         render: jest.fn(),
     }));
 
-    it('should be in the document', () => {
+    it('should bootstrap app', () => {
         bootstrap(App, 'root')
         expect(ReactDOM.render).toHaveBeenCalled()
-    })
-})
-
-
-describe('Index', () => {
-    it('should bootstrap react app', () => {
-
     })
 })
